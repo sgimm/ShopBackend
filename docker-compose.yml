@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+    db:
+        image: "mcr.microsoft.com/mssql/server:2017-latest-ubuntu"
+        environment:
+            SA_PASSWORD: M@ster99
+            ACCEPT_EULA: Y
+            MSSQL_PID: Developer
+            MSSQL_DB: db766617469
+            MSSQL_USER: sgimm
+            MSSQL_PASSWORD : M@ster99
+        #command:  powershell -executionpolicy bypass "C:\\Users\\cisso\\source\\repos\\testwebapp\\init_db.ps1"
+        ports:
+         - "1433:1433"

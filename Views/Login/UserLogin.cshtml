@@ -1,0 +1,22 @@
+﻿@model CustomerRegisterLoginViewModel
+@{
+    ViewData["Title"] = "UserLogin";
+}
+
+<h1>UserLogin</h1>
+
+<script>
+    var app;
+    function init() {
+        app = new ValkyraApp(document.getElementById("LayoutRoot"));
+        app.Initialize();
+    }
+</script>
+<script>
+        init();
+        var msg = new TMessageObject();
+        msg.MessageType = "@Model.FunctionName";
+        msg.MsgContent = "@Model.ValidationResultMessage";
+        app.SendMessage(msg);
+</script>
+
